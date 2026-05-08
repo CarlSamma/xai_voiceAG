@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --xai-dark: #0d1117;
+  --xai-darker: #010409;
+  --xai-accent: #4f98a3;
+  --xai-accent-hover: #6bb3bc;
+  --xai-text: #e6edf3;
+  --xai-text-muted: #8b949e;
+  --xai-border: #30363d;
+  --xai-success: #3fb950;
+  --xai-warning: #d29922;
+  --xai-error: #f85149;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--xai-dark);
+  color: var(--xai-text);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--xai-darker);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--xai-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--xai-text-muted);
+}
+
+/* Animation for VU meter */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.vu-meter-bar {
+  transition: width 50ms ease-out;
+}
+
+/* Monaco editor custom theme */
+.monaco-editor {
+  border-radius: 8px;
+  overflow: hidden;
+}
